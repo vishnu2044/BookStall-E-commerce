@@ -3,3 +3,4 @@
 media
 *.log
 tmp
+.env

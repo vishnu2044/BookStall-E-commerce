@@ -22,11 +22,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-u^3#y1o*o4ur=)^4&gj@q#ye_w6nw*y0qc9khh!zll@6iljpv#'
-SECRET_KEY = config('SECRETE_KEY')
+SECRET_KEY = 'django-insecure-u^3#y1o*o4ur=)^4&gj@q#ye_w6nw*y0qc9khh!zll@6iljpv#'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast=bool, default = True)
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'BookStall.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('DB_ENGINE'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
@@ -158,15 +158,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #EMAIL 
-EMAIL_BACKEND = config('EMAIL_BACKEND')
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_USE_TLS = config('EMAIL_USE_TLS')
-EMAIL_HOST_USER =config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'bookstallecom@gmail.com'
+EMAIL_HOST_PASSWORD = 'faveadzybsxoqjbi'
 
 
 
 ###############################################################################
-KEY_ID = config('KEY_ID')
-KEY_SECRET = config('KEY_SECRET')
+KEY_ID = 'rzp_test_fvvWsATyrA034l'
+KEY_SECRET = '3y6XK9GAZFXI4dwre79jwfxr'
