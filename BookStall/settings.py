@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+
     'app_home',
     'app_products',
     'app_category',
@@ -72,6 +77,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'BookStall.urls'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'duumajvre',
+    'API_KEY': '216219418138755',
+    'API_SECRET': 'pi6UojkHDq6l3ucpWfMN9pGj9bg'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 TEMPLATES = [
     {
