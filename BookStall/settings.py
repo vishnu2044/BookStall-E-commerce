@@ -84,7 +84,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'pi6UojkHDq6l3ucpWfMN9pGj9bg'
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 
 TEMPLATES = [
@@ -176,7 +176,10 @@ STATICFILES_DIRS = [
 #media files configartions
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR /'static'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
